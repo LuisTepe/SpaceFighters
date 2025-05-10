@@ -1,0 +1,17 @@
+res://Enemies/Scenes/enemy.tscn
+res://Enemies/Scenes/enemy_generator.tscn
+res://Enemies/Scenes/red_enemy.tscn
+res://Enemies/Scenes/yellow_bug.tscn
+res://Resources/game_stats.tres
+res://Resources/ship_move_stats.tres
+res://Scenes/explosion_effect.tscn
+res://Scenes/game_over.tscn
+res://Scenes/laser.tscn
+res://Scenes/main.tscn
+res://Scenes/MainScene.tscn
+res://Scenes/menu.tscn
+res://Scenes/ship.tscn
+res://Scenes/space_background.tscn
+res://Scripts/ship.gd
+res://Scripts/main.gd
+res://Scenes/game_win.tscn

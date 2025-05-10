@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://evqnxf1xklru"]
+
+[ext_resource type="Script" path="res://Lazer.gd" id="1_h7tu3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfic3"]
+radius = 5.0
+height = 18.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(112, 87)
+script = ExtResource("1_h7tu3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(258, 454)
+shape = SubResource("CapsuleShape2D_xfic3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

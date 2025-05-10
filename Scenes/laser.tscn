@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://pj2eomx56h71"]
+
+[ext_resource type="Script" uid="uid://dn4fw7ip7o6gw" path="res://Scripts/laser.gd" id="1_sdj3l"]
+[ext_resource type="Texture2D" uid="uid://baa4a4pxlhrnl" path="res://Assets/Sprites/Laser.png" id="2_g0t1s"]
+[ext_resource type="Script" uid="uid://cbqbcwi0qqsdj" path="res://Scripts/Game Components/move_settings.gd" id="3_biudp"]
+[ext_resource type="Script" uid="uid://dtsju8hyaceb7" path="res://Scripts/Game Components/game_scale.gd" id="4_3jwad"]
+[ext_resource type="Script" uid="uid://cppdeltb4g3md" path="res://Scripts/Game Components/hitbox.gd" id="5_u21xi"]
+[ext_resource type="AudioStream" uid="uid://yvgeid1lrpmj" path="res://Sounds/Shooting_sound.wav" id="6_he6dt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irnp6"]
+size = Vector2(3.91939, 8)
+
+[node name="Laser" type="Node2D"]
+script = ExtResource("1_sdj3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.462616, 0.501425)
+texture = ExtResource("2_g0t1s")
+
+[node name="Move" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("3_biudp")
+actor = NodePath("..")
+velocity = Vector2(2.08165e-12, -300)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Scale" type="Node" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("4_3jwad")
+sprite = NodePath("../Sprite2D")
+scale_amount = Vector2(2, 2)
+scale_duration = 1.0
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_u21xi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+scale = Vector2(1.02418, 1.00753)
+shape = SubResource("RectangleShape2D_irnp6")
+
+[node name="ShootingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_he6dt")
+volume_db = -44.861

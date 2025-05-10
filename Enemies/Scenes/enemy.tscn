@@ -1,0 +1,85 @@
+[gd_scene load_steps=17 format=3 uid="uid://b8kpcv38c7wu6"]
+
+[ext_resource type="Script" uid="uid://bo6rbtvjklp8x" path="res://Enemies/Scripts/enemy.gd" id="1_fj4k5"]
+[ext_resource type="Script" uid="uid://bmh5qpgjokri2" path="res://Scripts/Game Components/game_stats.gd" id="2_d2lfx"]
+[ext_resource type="Texture2D" uid="uid://h0rlvn12pkvn" path="res://Assets/Sprites/icon.png" id="3_fsheq"]
+[ext_resource type="Script" uid="uid://cppdeltb4g3md" path="res://Scripts/Game Components/hitbox.gd" id="3_nnlfh"]
+[ext_resource type="Script" uid="uid://dtsju8hyaceb7" path="res://Scripts/Game Components/game_scale.gd" id="4_m6yb6"]
+[ext_resource type="Script" uid="uid://cbqbcwi0qqsdj" path="res://Scripts/Game Components/move_settings.gd" id="5_xfpmc"]
+[ext_resource type="Script" uid="uid://dwore8378uimy" path="res://Scripts/Game Components/game_shake.gd" id="7_tvo7t"]
+[ext_resource type="Script" uid="uid://qx1byyufvac1" path="res://Scripts/Game Components/hurtbox.gd" id="8_x5iad"]
+[ext_resource type="Script" uid="uid://b44oa2onyowh" path="res://Scripts/Game Components/is_hurt.gd" id="9_8oex3"]
+[ext_resource type="Script" uid="uid://br1rfvo2ormbg" path="res://Scripts/Game Components/game_spawner.gd" id="10_s6wam"]
+[ext_resource type="PackedScene" uid="uid://bc7ohfyf5a20w" path="res://Scenes/explosion_effect.tscn" id="11_3pcgp"]
+[ext_resource type="Script" uid="uid://dco6yqioxggff" path="res://Scripts/Game Components/is_destroyed.gd" id="12_ckfp0"]
+[ext_resource type="Script" uid="uid://c306os8lcghjp" path="res://Scripts/Game Components/game_score.gd" id="13_3u87s"]
+[ext_resource type="Resource" uid="uid://xhr8bdpwtut5" path="res://Resources/game_stats.tres" id="14_dm61q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mjb04"]
+radius = 9.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qndsg"]
+size = Vector2(28.7234, 24)
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_fj4k5")
+
+[node name="GameStats" type="Node" parent="."]
+script = ExtResource("2_d2lfx")
+health = 2
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource("3_nnlfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_mjb04")
+
+[node name="Scale" type="Node" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("4_m6yb6")
+sprite = NodePath("../Sprite2D")
+
+[node name="Move" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("5_xfpmc")
+actor = NodePath("..")
+velocity = Vector2(2.08165e-12, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_fsheq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Shake" type="Node" parent="." node_paths=PackedStringArray("node")]
+script = ExtResource("7_tvo7t")
+node = NodePath("../Sprite2D")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_x5iad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-0.5, -0.5)
+scale = Vector2(1.00963, 1)
+shape = SubResource("RectangleShape2D_qndsg")
+
+[node name="EnemyIsHurt" type="Node" parent="." node_paths=PackedStringArray("stats_component", "hurtbox")]
+script = ExtResource("9_8oex3")
+stats_component = NodePath("../GameStats")
+hurtbox = NodePath("../Hurtbox")
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("10_s6wam")
+scene = ExtResource("11_3pcgp")
+
+[node name="Destroyed" type="Node" parent="." node_paths=PackedStringArray("actor", "stats_component", "destroy_effect_spawner_component")]
+script = ExtResource("12_ckfp0")
+actor = NodePath("..")
+stats_component = NodePath("../GameStats")
+destroy_effect_spawner_component = NodePath("../Spawner")
+
+[node name="Score" type="Node" parent="."]
+script = ExtResource("13_3u87s")
+game_stats = ExtResource("14_dm61q")

@@ -1,0 +1,79 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1721424478
+::res://Assets/::1721420574
+::res://Assets/Fonts/::1721420574
+default_label_settings.tres::LabelSettings::3273514142055280800::1721420574::0::1::::<><>::uid://dnhheqxvjpmf1::::res://Assets/Fonts/kenney_mini_square.ttf
+kenney_mini_square.ttf::FontFile::8086600701648005852::1721420574::1721420574::1::::<><>::
+title_label_settings.tres::LabelSettings::8028988321146009542::1721420574::0::1::::<><>::uid://dnhheqxvjpmf1::::res://Assets/Fonts/kenney_mini_square.ttf
+::res://Assets/Sounds/::1721420574
+Enemy_death_1.wav::AudioStreamWAV::7457668730228223458::1721420574::1721420574::1::::<><>::
+Enemy_death_2.wav::AudioStreamWAV::7576732649185305092::1721420574::1721420574::1::::<><>::
+Enemy_death_3.wav::AudioStreamWAV::2407810076387812043::1721420574::1721420574::1::::<><>::
+player_explotion.wav::AudioStreamWAV::2138687851340895966::1721420574::1721420574::1::::<><>::
+Shooting_sound.wav::AudioStreamWAV::1728256051298171925::1721420574::1721420574::1::::<><>::
+Space_Sauce.wav::AudioStreamWAV::7543282943556864362::1721420574::1721420574::1::::<><>::
+::res://Assets/Sprites/::1721424478
+Black Star.png::CompressedTexture2D::387192445259808521::1721420574::1721420574::1::::<><>::
+Blue Star.png::CompressedTexture2D::70743201409796278::1721420574::1721420574::1::::<><>::
+Enemy Laser.png::CompressedTexture2D::7974927714395008185::1721420574::1721420574::1::::<><>::
+Enemy ship.png::CompressedTexture2D::8876657399700774130::1721420574::1721420574::1::::<><>::
+Explosion.png::CompressedTexture2D::5670597218904626063::1721420574::1721420574::1::::<><>::
+Far Stars.png::CompressedTexture2D::2541230043484143847::1721420574::1721420574::1::::<><>::
+icon.png::CompressedTexture2D::543984306218519207::1721420575::1721420575::1::::<><>::
+Laser.png::CompressedTexture2D::2388183023892558609::1721420575::1721420575::1::::<><>::
+Meteor.png::CompressedTexture2D::6968198854007589157::1721420575::1721420575::1::::<><>::
+Near Stars.png::CompressedTexture2D::272564412503248243::1721420575::1721420575::1::::<><>::
+Player Laser.png::CompressedTexture2D::7972248150774311162::1721420575::1721420575::1::::<><>::
+Purple Star.png::CompressedTexture2D::8519248985920430937::1721420575::1721420575::1::::<><>::
+RedBug.png::CompressedTexture2D::7759015980543403359::1721424471::1721424478::1::::<><>::
+Space Ship.png::CompressedTexture2D::2180003993889304994::1721420575::1721420575::1::::<><>::
+Space.png::CompressedTexture2D::7598318026256319398::1721420575::1721420575::1::::<><>::
+Star.png::CompressedTexture2D::2818285469458238924::1721420575::1721420575::1::::<><>::
+YellowBug.png::CompressedTexture2D::6832013863661661503::1721420575::1721420575::1::::<><>::
+::res://Enemies/::1721420575
+::res://Enemies/Scenes/::1721424752
+enemy.tscn::PackedScene::4724211775516276447::1721424752::0::1::::<><>::res://Enemies/Scripts/enemy.gd<>res://Scripts/Game Components/game_stats.gd<>uid://h0rlvn12pkvn::::res://Assets/Sprites/icon.png<>res://Scripts/Game Components/hitbox.gd<>res://Scripts/Game Components/game_scale.gd<>res://Scripts/Game Components/move_settings.gd<>res://Scripts/Game Components/game_shake.gd<>res://Scripts/Game Components/hurtbox.gd<>res://Scripts/Game Components/is_hurt.gd<>res://Scripts/Game Components/game_spawner.gd<>uid://bc7ohfyf5a20w::::res://Scenes/explosion_effect.tscn<>res://Scripts/Game Components/is_destroyed.gd<>res://Scripts/Game Components/game_score.gd<>uid://xhr8bdpwtut5::::res://Resources/game_stats.tres
+enemy_generator.tscn::PackedScene::7349365078566719484::1721424752::0::1::::<><>::res://Enemies/Scripts/enemy_generator.gd<>uid://b8kpcv38c7wu6::::res://Enemies/Scenes/enemy.tscn<>res://Scripts/Game Components/game_spawner.gd
+red_enemy.tscn::PackedScene::1119487734706761668::1721424752::0::1::::<><>::uid://b8kpcv38c7wu6::::res://Enemies/Scenes/enemy.tscn<>uid://disr4hxpiidwh::::res://Assets/Sprites/RedBug.png
+red_enemy.gd::GDScript::-1::1721424813::0::1::::<>Enemy<>::
+yellow_bug.tscn::PackedScene::2918198578161431337::1721424752::0::1::::<><>::uid://b8kpcv38c7wu6::::res://Enemies/Scenes/enemy.tscn<>res://Enemies/Scripts/yellow_bug.gd<>uid://c4lqjgks61u8n::::res://Assets/Sprites/YellowBug.png<>res://Scripts/Game Components/border_bounce.gd
+::res://Enemies/Scripts/::1721424617
+enemy.gd::GDScript::-1::1721420575::0::1::::Enemy<>Node2D<>::
+enemy_generator.gd::GDScript::-1::1721424617::0::1::::<>Node2D<>::
+yellow_bug.gd::GDScript::-1::1721420575::0::1::::<>Enemy<>::
+::res://Resources/::1721420575
+game_stats.tres::Resource/Resource::1629885225898519436::1721420575::0::1::::<><>::res://Scripts/game_stats.gd
+ship_move_stats.tres::Resource/Resource::4831261479344869387::1721420575::0::1::::<><>::res://Scripts/Game Components/move_stats.gd
+::res://Scenes/::1721424752
+explosion_effect.tscn::PackedScene::2593721297514499412::1721424752::0::1::::<><>::uid://cm1454kwsg880::::res://Assets/Sprites/Explosion.png<>res://Scripts/Game Components/explosion_animation.gd<>uid://5p842f2rn2go::::res://Assets/Sounds/player_explotion.wav
+game_over.tscn::PackedScene::4606723322423643992::1721424752::0::1::::<><>::res://Scripts/game_over.gd<>uid://xhr8bdpwtut5::::res://Resources/game_stats.tres<>uid://dmnki842x7duc::::res://Assets/Fonts/title_label_settings.tres<>uid://bmvykgntoobi3::::res://Assets/Fonts/default_label_settings.tres<>uid://coixsq46imwxl::::res://Scenes/space_background.tscn
+laser.tscn::PackedScene::1073059311288225326::1721424752::0::1::::<><>::res://Scripts/laser.gd<>uid://baa4a4pxlhrnl::::res://Assets/Sprites/Laser.png<>res://Scripts/Game Components/move_settings.gd<>res://Scripts/Game Components/game_scale.gd<>res://Scripts/Game Components/hitbox.gd<>uid://yvgeid1lrpmj::::res://Assets/Sounds/Shooting_sound.wav
+main.tscn::PackedScene::4031089130258663976::1721424752::0::1::::<><>::res://Scripts/main.gd<>uid://xhr8bdpwtut5::::res://Resources/game_stats.tres<>uid://coixsq46imwxl::::res://Scenes/space_background.tscn<>uid://dcyc77jbuu5ca::::res://Enemies/Scenes/enemy_generator.tscn<>uid://bhtuklxnb6sld::::res://Enemies/Scenes/yellow_bug.tscn<>uid://cec63gfiy7fkc::::res://Scenes/ship.tscn<>uid://p7j2ge38k1dw::::res://Enemies/Scenes/red_enemy.tscn<>uid://bmvykgntoobi3::::res://Assets/Fonts/default_label_settings.tres<>uid://dfqa1d2gvl73k::::res://Assets/Sounds/Space_Sauce.wav
+menu.tscn::PackedScene::3596845413179340886::1721424752::0::1::::<><>::res://Scripts/menu.gd<>uid://coixsq46imwxl::::res://Scenes/space_background.tscn<>uid://dmnki842x7duc::::res://Assets/Fonts/title_label_settings.tres<>uid://bmvykgntoobi3::::res://Assets/Fonts/default_label_settings.tres
+ship.tscn::PackedScene::5059658049712490922::1721424752::0::1::::<><>::uid://6cal2pmqctpi::::res://Assets/Sprites/Space Ship.png<>res://Scripts/ship.gd<>res://Scripts/Game Components/move_settings.gd<>res://Scripts/Game Components/game_spawner.gd<>res://Scripts/Game Components/hurtbox.gd<>res://Scripts/Game Components/move_input.gd<>uid://pj2eomx56h71::::res://Scenes/laser.tscn<>uid://ca3kf2lse8s80::::res://Resources/ship_move_stats.tres<>res://Scripts/Game Components/position_clamp.gd<>res://Scripts/Game Components/game_scale.gd<>res://Scripts/Game Components/game_stats.gd<>res://Scripts/Game Components/is_hurt.gd<>uid://bc7ohfyf5a20w::::res://Scenes/explosion_effect.tscn<>res://Scripts/Game Components/is_destroyed.gd
+space_background.tscn::PackedScene::5773429722067667569::1721420575::0::1::::<><>::res://Scripts/space_background.gd<>uid://dgixgnb5f5fco::::res://Assets/Sprites/Space.png<>uid://bcg8xm18sy1pb::::res://Assets/Sprites/Far Stars.png<>uid://d5bdjbho4vfn::::res://Assets/Sprites/Near Stars.png
+::res://Scripts/::1721420575
+game_over.gd::GDScript::-1::1721420575::0::1::::<>Control<>::
+game_stats.gd::GDScript::-1::1721420575::0::1::::GameStats<>Resource<>::
+laser.gd::GDScript::-1::1721420575::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1721420575::0::1::::<>Node2D<>::
+menu.gd::GDScript::-1::1721420575::0::1::::<>Control<>::
+resource_load.gd::GDScript::-1::1721420575::0::1::::<>Node<>::
+ship.gd::GDScript::-1::1721420575::0::1::::<>Node2D<>::
+space_background.gd::GDScript::-1::1721420575::0::1::::<>ParallaxBackground<>::
+::res://Scripts/Game Components/::1721420575
+border_bounce.gd::GDScript::-1::1721420575::0::1::::BorderBounce<>Node<>::
+explosion_animation.gd::GDScript::-1::1721420575::0::1::::OneTimeAnimatedEffect<>AnimatedSprite2D<>::
+game_scale.gd::GDScript::-1::1721420575::0::1::::ScaleObjects<>Node<>::
+game_score.gd::GDScript::-1::1721420575::0::1::::Score<>Node<>::
+game_shake.gd::GDScript::-1::1721420575::0::1::::Shake<>Node<>::
+game_spawner.gd::GDScript::-1::1721420575::0::1::::Spawner<>Node2D<>::
+game_stats.gd::GDScript::-1::1721420575::0::1::::StatsComponent<>Node<>::
+hitbox.gd::GDScript::-1::1721420575::0::1::::Hitbox<>Area2D<>::
+hurtbox.gd::GDScript::-1::1721420575::0::1::::Hurtbox<>Area2D<>::
+is_destroyed.gd::GDScript::-1::1721420575::0::1::::IsDestroyed<>Node<>::
+is_hurt.gd::GDScript::-1::1721420575::0::1::::IsHurt<>Node<>::
+move_input.gd::GDScript::-1::1721420575::0::1::::MoveInput<>Node<>::
+move_settings.gd::GDScript::-1::1721420575::0::1::::MoveObjects<>Node<>::
+move_stats.gd::GDScript::-1::1721420575::0::1::::MoveStats<>Resource<>::
+position_clamp.gd::GDScript::-1::1721420575::0::1::::PositionClamp<>Node2D<>::

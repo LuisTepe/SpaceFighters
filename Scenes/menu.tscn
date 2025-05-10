@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://brilrvletbuti"]
+
+[ext_resource type="Script" uid="uid://dv3yxuj6hfqu6" path="res://Scripts/menu.gd" id="1_qtm4m"]
+[ext_resource type="PackedScene" uid="uid://coixsq46imwxl" path="res://Scenes/space_background.tscn" id="2_oua21"]
+[ext_resource type="LabelSettings" uid="uid://dmnki842x7duc" path="res://Assets/Fonts/title_label_settings.tres" id="3_blk1r"]
+[ext_resource type="LabelSettings" uid="uid://bmvykgntoobi3" path="res://Assets/Fonts/default_label_settings.tres" id="4_jpg3m"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtm4m")
+
+[node name="SpaceBackground" parent="." instance=ExtResource("2_oua21")]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Space Fighters"
+label_settings = ExtResource("3_blk1r")
+horizontal_alignment = 1
+
+[node name="StartLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press 'Enter' to play"
+label_settings = ExtResource("4_jpg3m")
+horizontal_alignment = 1
+
+[node name="CreditsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 355.0
+offset_right = 246.0
+offset_bottom = 481.0
+text = "Tepezano Cota
+Molina Perez
+Borbon Avitia"
+label_settings = ExtResource("4_jpg3m")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://p7j2ge38k1dw"]
+
+[ext_resource type="PackedScene" uid="uid://b8kpcv38c7wu6" path="res://Enemies/Scenes/enemy.tscn" id="1_o4f6b"]
+[ext_resource type="Texture2D" uid="uid://disr4hxpiidwh" path="res://Assets/Sprites/RedBug.png" id="2_firk1"]
+
+[node name="RedEnemy" instance=ExtResource("1_o4f6b")]
+script = null
+
+[node name="GameStats" parent="." index="0"]
+health = 1
+
+[node name="Sprite2D" parent="." index="4"]
+texture = ExtResource("2_firk1")
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Score" parent="." index="11"]
+adjust_amount = 3

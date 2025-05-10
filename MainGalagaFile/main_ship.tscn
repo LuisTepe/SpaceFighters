@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://clgfhiottal3j"]
+
+[ext_resource type="Script" path="res://main_ship.gd" id="1_v7k4y"]
+[ext_resource type="Texture2D" uid="uid://bfi244ncv8517" path="res://icon.svg" id="2_mn58s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aeyk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mn58s")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mn58s")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mn58s")
+}],
+"loop": true,
+"name": &"Still",
+"speed": 5.0
+}]
+
+[node name="MainShip" type="Area2D"]
+position = Vector2(492, 556)
+script = ExtResource("1_v7k4y")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aeyk0")
+animation = &"Left"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-22.8724, -11.9081)
+scale = Vector2(1.06765, 1.11047)
+polygon = PackedVector2Array(27.9796, -13.5906, 45.7757, 26.0325, 96.3541, 51.2471, -31.0285, 50.3466, 12.9934, 25.132)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
